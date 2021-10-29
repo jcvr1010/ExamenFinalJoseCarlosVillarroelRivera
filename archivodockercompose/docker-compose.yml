@@ -1,0 +1,73 @@
+version: "3.8"
+services:
+  php1:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: container1
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 50M
+    restart: always
+    ports:
+      - 9090:80
+  php2:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: container2
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 50M
+    restart: always
+    ports:
+      - 9091:80
+  php3:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: container3
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 50M
+    restart: always
+    ports:
+      - 9092:80
+  php4:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: container4
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 50M
+    restart: always
+    ports:
+      - 9093:80
+  php5:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: container5
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 50M
+    restart: always
+    ports:
+      - 9094:80
+  
